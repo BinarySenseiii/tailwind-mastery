@@ -18,11 +18,13 @@ export default function HomePage() {
           </p>
         </div>
 
-        <ul>
+        <ul className="flex max-w-2xl mx-auto flex-wrap justify-center gap-2">
           {logos.map(logo => (
             <li key={logo.href}>
-              <a href={logo.href}>
-                <Image src={logo.src} alt={logo.alt} className="w-16" />
+              <a
+                href={logo.href}
+                className="size-20 grid place-content-center bg-highlight/[7%] rounded-2xl p-4">
+                <Image src={logo.src} alt={logo.alt} />
               </a>
             </li>
           ))}
