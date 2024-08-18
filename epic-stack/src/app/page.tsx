@@ -26,8 +26,8 @@ const rowClasses: Record<(typeof logos)[number]['row'], string> = {
 export default function HomePage() {
   return (
     <div className="min-h-dvh grid place-content-center px-4 py-16">
-      <div className="grid place-content-center items-center gap-12 sm:gap-16 xl:gap-24 xl:grid-cols-[auto_1fr]">
-        <div className="text-center flex flex-col items-center max-w-md mx-auto xl:order-2 xl:items-start xl:text-left">
+      <div className="grid place-content-center items-center gap-12 sm:gap-16 xl:gap-x-24 xl:gap-y-4 xl:grid-cols-[auto_1fr]">
+        <div className="text-center grid items-center max-w-md mx-auto xl:order-2 xl:items-start xl:text-left xl:grid-rows-subgrid xl:row-span-2 xl:row-start-3 xl:col-start-2">
           <EpicStackLogo
             className={clsx(
               'size-20 animate-slide-top xl:animate-slide-left xl:[animation-delay:0.5s]',
@@ -39,7 +39,7 @@ export default function HomePage() {
               'animate-slide-top [animation-delay:0.3s]',
               'xl:animate-slide-left xl:[animation-delay:0.8s]',
             )}>
-            The <span className="text-highlight">Epic</span> Stack
+            The <span className="text-highlight">Epic</span> Starter
           </h1>
           <p
             className={clsx(
@@ -58,7 +58,7 @@ export default function HomePage() {
           </p>
         </div>
 
-        <ul className="flex max-w-2xl lg:max-w-3xl mx-auto flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-cols-5 xl:grid-rows-6 xl:grid-flow-col">
+        <ul className="flex max-w-2xl lg:max-w-3xl mx-auto flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-cols-5 xl:grid-rows-subgrid xl:row-span-6 xl:grid-flow-col">
           {logos.map((logo, index) => (
             <li
               style={{ '--loop-index': index } as React.CSSProperties}
