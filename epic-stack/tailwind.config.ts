@@ -12,7 +12,7 @@ const config: Config = {
         highlight: '#6202FF',
       },
       fontSize: {
-        '4.5xl': ['1.563rem', '1.15'],
+        '4.5xl': ['2.625rem', '1.15'],
         '5.5xl': ['3.375rem', '1'],
       },
       fontFamily: {
