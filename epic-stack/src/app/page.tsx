@@ -34,7 +34,10 @@ export default function HomePage() {
           </h1>
           <p className="mt-4 md:mt-6 text-base sm:text-lg md:text-xl text-slate-600">
             Check the{' '}
-            <a href="#" className="text-black underline" target="_blank">
+            <a
+              href="#"
+              className="text-black underline hover:no-underline focus:outline-0 focus:ring-2 focus:ring-highlight"
+              target="_blank">
               Getting Started
             </a>{' '}
             guide file for how to get your project off the ground!
@@ -49,7 +52,7 @@ export default function HomePage() {
               <a
                 target="_blank"
                 href={logo.href}
-                className="size-20 sm:size-24 grid place-content-center bg-highlight/[7%] rounded-2xl p-4">
+                className="size-20 sm:size-24 grid place-content-center transition hover:-rotate-6 bg-highlight/[7%] hover:bg-highlight/10 rounded-2xl p-4">
                 <Image src={logo.src} alt={logo.alt} />
               </a>
             </li>
