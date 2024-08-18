@@ -28,11 +28,25 @@ export default function HomePage() {
     <div className="min-h-dvh grid place-content-center px-4 py-16">
       <div className="grid place-content-center items-center gap-12 sm:gap-16 xl:gap-24 xl:grid-cols-[auto_1fr]">
         <div className="text-center flex flex-col items-center max-w-md mx-auto xl:order-2 xl:items-start xl:text-left">
-          <EpicStackLogo className="size-20" />
-          <h1 className="mt-6 md:mt-8 text-4xl sm:text-4.5xl md:text-5xl font-medium">
+          <EpicStackLogo
+            className={clsx(
+              'size-20 animate-slide-top xl:animate-slide-left xl:[animation-delay:0.5s]',
+            )}
+          />
+          <h1
+            className={clsx(
+              'mt-6 md:mt-8 text-4xl sm:text-4.5xl md:text-5xl font-medium',
+              'animate-slide-top [animation-delay:0.3s]',
+              'xl:animate-slide-left xl:[animation-delay:0.8s]',
+            )}>
             The <span className="text-highlight">Epic</span> Stack
           </h1>
-          <p className="mt-4 md:mt-6 text-base sm:text-lg md:text-xl text-slate-600">
+          <p
+            className={clsx(
+              'mt-4 md:mt-6 text-base sm:text-lg md:text-xl text-slate-600 ',
+              'animate-slide-top [animation-delay:0.8s]',
+              'xl:animate-slide-left xl:[animation-delay:1.3s]',
+            )}>
             Check the{' '}
             <a
               href="#"
@@ -45,10 +59,16 @@ export default function HomePage() {
         </div>
 
         <ul className="flex max-w-2xl lg:max-w-3xl mx-auto flex-wrap justify-center gap-2 sm:gap-4 xl:grid xl:grid-cols-5 xl:grid-rows-6 xl:grid-flow-col">
-          {logos.map(logo => (
+          {logos.map((logo, index) => (
             <li
+              style={{ '--loop-index': index } as React.CSSProperties}
               key={logo.href}
-              className={clsx(columnClasses[logo.column], rowClasses[logo.row])}>
+              className={clsx(
+                columnClasses[logo.column],
+                rowClasses[logo.row],
+                'motion-safe:animate-roll-reveal animate-fade-in',
+                'motion-safe:[animation-delay:calc(0.07s*var(--loop-index))]',
+              )}>
               <a
                 target="_blank"
                 href={logo.href}
