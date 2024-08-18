@@ -52,7 +52,7 @@ export default function HomePage() {
               <a
                 target="_blank"
                 href={logo.href}
-                className="size-20 sm:size-24 grid place-content-center transition hover:-rotate-6 bg-highlight/[7%] hover:bg-highlight/10 rounded-2xl p-4">
+                className="size-20 sm:size-24 grid place-content-center transition hover:-rotate-6 bg-highlight/[7%] hover:bg-highlight/10 rounded-2xl p-4 focus:outline-0 focus:ring-2 focus:ring-highlight focus:ring-offset-2">
                 <Image src={logo.src} alt={logo.alt} />
               </a>
             </li>
