@@ -23,33 +23,33 @@ const rowClasses: Record<(typeof logos)[number]['row'], string> = {
   6: 'xl:row-start-6',
 }
 
-export default function HomePage() {
+export default async function HomePage() {
   return (
     <div className="min-h-dvh grid place-content-center px-4 py-16">
-      <div className="grid place-content-center items-center gap-12 sm:gap-16 xl:gap-x-24 xl:gap-y-4 xl:grid-cols-[auto_1fr]">
-        <div className="text-center grid items-center max-w-md mx-auto xl:order-2 xl:items-start xl:text-left xl:grid-rows-subgrid xl:row-span-2 xl:row-start-3 xl:col-start-2">
+      <div className="grid place-content-center items-center gap-12 sm:gap-16 xl:gap-x-24 xl:gap-y-4 xl:grid-cols-[auto_1fr] max-w-6xl">
+        <div className="text-center grid items-center mx-auto xl:order-2 xl:text-left xl:grid-cols-[auto_1fr] xl:grid-rows-subgrid xl:gap-4 xl:row-span-2 xl:row-start-3 xl:col-start-2">
           <EpicStackLogo
             className={clsx(
-              'size-20 animate-slide-top xl:animate-slide-left xl:[animation-delay:0.5s]',
+              'size-20 animate-slide-top xl:animate-slide-left xl:[animation-delay:0.5s] justify-self-center xl:justify-self-start',
             )}
           />
           <h1
             className={clsx(
-              'mt-6 md:mt-8 text-4xl sm:text-4.5xl md:text-5xl font-medium',
+              'mt-6 md:mt-8 xl:mt-0 text-4xl sm:text-4.5xl md:text-5xl font-medium',
               'animate-slide-top [animation-delay:0.3s]',
               'xl:animate-slide-left xl:[animation-delay:0.8s]',
             )}>
-            The <span className="text-highlight">Epic</span> Starter
+            The <span className="text-highlight">Epic</span> Stack
           </h1>
           <p
             className={clsx(
-              'mt-4 md:mt-6 text-base sm:text-lg md:text-xl text-slate-600 ',
+              'mt-4 md:mt-6 xl:mt-0 text-base sm:text-lg md:text-xl text-slate-600 xl:col-span-2',
               'animate-slide-top [animation-delay:0.8s]',
               'xl:animate-slide-left xl:[animation-delay:1.3s]',
             )}>
             Check the{' '}
             <a
-              href="#"
+              href="https://github.com/BinarySenseiii/next-clean"
               className="text-black underline hover:no-underline focus:outline-0 focus:ring-2 focus:ring-highlight"
               target="_blank">
               Getting Started
