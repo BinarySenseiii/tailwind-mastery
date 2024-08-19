@@ -43,7 +43,7 @@ export default async function HomePage() {
           </h1>
           <p
             className={clsx(
-              'mt-4 md:mt-6 xl:mt-0 text-base sm:text-lg md:text-xl text-slate-600 xl:col-span-2',
+              'mt-4 md:mt-6 xl:mt-0 text-base sm:text-lg md:text-xl text-slate-600 xl:col-span-2 max-w-md xl:max-w-full',
               'animate-slide-top [animation-delay:0.8s]',
               'xl:animate-slide-left xl:[animation-delay:1.3s]',
             )}>
