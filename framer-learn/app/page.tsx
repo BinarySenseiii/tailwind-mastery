@@ -1,8 +1,8 @@
-import { FramerBasics } from "@/components/framer"
+import { FramerStagger } from "@/components/framer"
 
 const HomePage = () => {
   return (
-    <FramerBasics />
+    <FramerStagger />
   )
 }
 
