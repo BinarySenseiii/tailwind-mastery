@@ -1,9 +1,9 @@
-import { FramerViewBasedAnimation } from "@/components/framer"
+import { FramerScrollBasedAnimation } from "@/components/framer"
 
 const HomePage = () => {
   return (
-    <div className="p-2">
-      <FramerViewBasedAnimation />
+    <div className="">
+      <FramerScrollBasedAnimation />
     </div>
   )
 }
