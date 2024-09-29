@@ -1,8 +1,10 @@
-import { FramerStagger } from "@/components/framer"
+import { FramerViewBasedAnimation } from "@/components/framer"
 
 const HomePage = () => {
   return (
-    <FramerStagger />
+    <div className="p-2">
+      <FramerViewBasedAnimation />
+    </div>
   )
 }
 
